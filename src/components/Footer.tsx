@@ -1,13 +1,9 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-vas-dark text-white pt-16 pb-8">
+  return <footer className="bg-vas-dark text-white pt-16 pb-8">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -108,9 +104,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-vas-bronze mr-3 mt-0.5" />
-                <span className="text-gray-300">
-                  Polígono Industrial, Segovia, España
-                </span>
+                <span className="text-gray-300">Segovia, España</span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 text-vas-bronze mr-3" />
@@ -155,8 +149,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
