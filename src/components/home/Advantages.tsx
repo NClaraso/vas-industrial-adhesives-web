@@ -1,6 +1,9 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const advantages = [
   {
@@ -70,6 +73,19 @@ const Advantages = () => {
               </p>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Button 
+            asChild 
+            variant="outline" 
+            className="border-vas-bronze text-vas-bronze hover:bg-vas-bronze hover:text-white"
+          >
+            <Link to="/ventajas">
+              Ver todas las ventajas
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Check } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const advantages = [
   {
@@ -17,6 +18,8 @@ const advantages = [
     ],
     image: 'flexible-production.jpg',
     bgColor: 'bg-white',
+    color: 'bg-gray-50',
+    number: '01',
   },
   {
     title: 'Desarrollo técnico propio',
@@ -29,6 +32,9 @@ const advantages = [
     ],
     image: 'technical-development.jpg',
     bgColor: 'bg-gray-50',
+    color: 'bg-vas-gray',
+    textColor: 'text-white',
+    number: '02',
   },
   {
     title: 'Alta calidad constante',
@@ -41,6 +47,8 @@ const advantages = [
     ],
     image: 'quality-control.jpg',
     bgColor: 'bg-white',
+    color: 'bg-vas-bronze/10',
+    number: '03',
   },
   {
     title: 'Entrega ágil',
@@ -53,6 +61,9 @@ const advantages = [
     ],
     image: 'fast-delivery.jpg',
     bgColor: 'bg-gray-50',
+    color: 'bg-vas-bronze',
+    textColor: 'text-white',
+    number: '04',
   },
   {
     title: 'Producción local',
@@ -65,6 +76,8 @@ const advantages = [
     ],
     image: 'local-production.jpg',
     bgColor: 'bg-white',
+    color: 'bg-gray-100',
+    number: '05',
   },
 ];
 
@@ -84,6 +97,42 @@ const Ventajas = () => {
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
               Descubra por qué elegir VAS Industrial como su proveedor de adhesivos hot melt para aplicaciones industriales.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Advantages Overview */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="heading-lg mb-6">¿Por qué elegir VAS Industrial?</h2>
+            <p className="text-lg text-gray-600">
+              Descubra las ventajas de trabajar con un fabricante español especializado en adhesivos industriales.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {advantages.map((advantage, index) => (
+              <div 
+                key={index}
+                className={cn(
+                  "rounded-lg p-8 relative overflow-hidden group transition-all hover:shadow-lg",
+                  advantage.color,
+                  advantage.textColor || 'text-vas-dark'
+                )}
+              >
+                <span className="block text-6xl font-bold opacity-10 absolute -bottom-6 -right-2 transition-opacity group-hover:opacity-20">
+                  {advantage.number}
+                </span>
+                <h3 className="text-xl font-bold mb-4 relative z-10">{advantage.title}</h3>
+                <p className={cn(
+                  "relative z-10", 
+                  advantage.textColor === 'text-white' ? 'text-gray-200' : 'text-gray-600'
+                )}>
+                  {advantage.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -116,7 +165,7 @@ const Ventajas = () => {
                   </ul>
                 </div>
                 <div className={index % 2 === 1 ? 'order-1 lg:order-2' : ''}>
-                  <div className="aspect-square rounded-lg overflow-hidden bg-vas-gray">
+                  <div className="rounded-lg overflow-hidden bg-vas-gray relative aspect-video">
                     <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <span className="text-white/90 text-xl font-heading">Imagen de {advantage.title}</span>
