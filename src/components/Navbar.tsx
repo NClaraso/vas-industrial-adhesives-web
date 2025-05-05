@@ -83,8 +83,7 @@ const Navbar = () => {
           ))}
           <Button 
             asChild 
-            variant="outline" 
-            className="font-medium border-vas-bronze text-vas-bronze hover:bg-vas-bronze hover:text-white"
+            className="font-medium bg-vas-bronze text-white hover:bg-white hover:text-vas-bronze transition-colors"
           >
             <Link to="/contacto">Solicitar información</Link>
           </Button>
@@ -115,8 +114,7 @@ const Navbar = () => {
           ))}
           <Button 
             asChild 
-            variant="outline" 
-            className="mt-4 font-medium border-vas-bronze text-vas-bronze hover:bg-vas-bronze hover:text-white"
+            className="mt-4 font-medium bg-vas-bronze text-white hover:bg-white hover:text-vas-bronze transition-colors"
           >
             <Link to="/contacto" onClick={closeMenu}>Solicitar información</Link>
           </Button>
