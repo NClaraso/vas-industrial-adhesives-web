@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section className="relative bg-vas-dark min-h-screen flex items-center">
+  return <section className="relative bg-vas-dark min-h-screen flex items-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute w-full h-full bg-[radial-gradient(#C87941_1px,transparent_1px)] [background-size:40px_40px]"></div>
@@ -16,28 +13,19 @@ const Hero = () => {
       <div className="container-custom relative z-10 pt-20">
         <div className="max-w-3xl mx-auto md:mx-0">
           <h1 className="heading-xl text-white mb-6">
-            <span className="text-vas-bronze">Adhesivos hot melt</span> para la industria
+            <span className="text-vas-bronze">Adhesivos Hot Melt</span> para la industria
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
             Fabricamos adhesivos hot melt de alta calidad para sectores industriales como packaging, madera, automoción, higiene y ensamblaje técnico. Combinamos experiencia técnica con producción ágil y soluciones a medida.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              asChild 
-              size="lg" 
-              className="bg-vas-bronze hover:bg-vas-bronze/90 text-white"
-            >
+            <Button asChild size="lg" className="bg-vas-bronze hover:bg-vas-bronze/90 text-white">
               <Link to="/contacto">
                 Solicitar información
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button 
-              asChild 
-              size="lg" 
-              variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10 hover:border-white/40"
-            >
+            <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-white/40">
               <Link to="/productos">
                 Ver productos
               </Link>
@@ -61,8 +49,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
