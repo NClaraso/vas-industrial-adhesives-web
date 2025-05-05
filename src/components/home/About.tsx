@@ -1,19 +1,13 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Factory, Check } from 'lucide-react';
-
 const About = () => {
-  return (
-    <section className="section-padding bg-white">
+  return <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-vas-muted/10 text-vas-muted mb-6">
-              <Factory className="w-4 h-4 mr-2" />
-              <span className="text-sm font-medium">Fabricante español</span>
-            </div>
+            
             <h2 className="heading-lg mb-6">
               Expertos en <span className="text-vas-bronze">adhesivos hot melt</span> para aplicaciones industriales
             </h2>
@@ -61,8 +55,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
