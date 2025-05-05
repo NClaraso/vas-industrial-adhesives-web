@@ -1,11 +1,8 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Check, Factory, HardHat, Wrench } from 'lucide-react';
-
 const SobreNosotros = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-vas-dark text-white relative">
         {/* Background Pattern */}
@@ -28,10 +25,7 @@ const SobreNosotros = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-vas-muted/10 text-vas-muted mb-6">
-                <Factory className="w-4 h-4 mr-2" />
-                <span className="text-sm font-medium">Nuestra historia</span>
-              </div>
+              
               <h2 className="heading-lg mb-6">
                 Experiencia y conocimiento en <span className="text-vas-bronze">adhesivos industriales</span>
               </h2>
@@ -182,8 +176,6 @@ const SobreNosotros = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default SobreNosotros;
