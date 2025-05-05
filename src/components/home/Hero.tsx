@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+
 const Hero = () => {
   return <section className="relative bg-vas-dark min-h-screen flex items-center">
       {/* Background Pattern */}
@@ -25,7 +27,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-white/40">
+            <Button asChild size="lg" variant="outline" className="border-white/30 text-vas-dark hover:bg-white/10 hover:border-white/40">
               <Link to="/productos">
                 Ver productos
               </Link>
