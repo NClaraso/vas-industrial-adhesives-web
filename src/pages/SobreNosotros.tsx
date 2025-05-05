@@ -61,10 +61,7 @@ const SobreNosotros = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-vas-muted/10 text-vas-muted mb-6">
-                <HardHat className="w-4 h-4 mr-2" />
-                <span className="text-sm font-medium">Nuestro equipo técnico</span>
-              </div>
+              
               <h2 className="heading-lg mb-6">
                 Experiencia técnica y <span className="text-vas-bronze">conocimiento especializado</span>
               </h2>
@@ -101,10 +98,7 @@ const SobreNosotros = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-vas-muted/10 text-vas-muted mb-6">
-                <Wrench className="w-4 h-4 mr-2" />
-                <span className="text-sm font-medium">Enfoque industrial</span>
-              </div>
+              
               <h2 className="heading-lg mb-6">
                 Orientados a la <span className="text-vas-bronze">solución técnica</span>
               </h2>
