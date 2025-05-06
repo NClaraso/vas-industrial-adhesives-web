@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
@@ -39,41 +38,55 @@ const advantages = [{
 }];
 
 const comparisonFeatures = [{
-  feature: "Flexibilidad en pedidos",
-  vas: true,
-  competidor: false
+  feature: "Tiempos de respuesta",
+  vas: {
+    value: "Rápidos (24-48h)",
+    positive: true
+  },
+  competidor: {
+    value: "Lentos (semanas)",
+    positive: false
+  }
 }, {
-  feature: "Desarrollo técnico propio",
-  vas: true,
-  competidor: false
+  feature: "Desarrollo a medida",
+  vas: {
+    value: "Para cualquier cliente",
+    positive: true
+  },
+  competidor: {
+    value: "Solo grandes cuentas",
+    positive: false
+  }
 }, {
-  feature: "Producción local (España)",
-  vas: true,
-  competidor: false
-}, {
-  feature: "Servicio de entrega urgente",
-  vas: true,
-  competidor: true
-}, {
-  feature: "Adaptación de formulaciones",
-  vas: true,
-  competidor: false
-}, {
-  feature: "Control de calidad por lote",
-  vas: true,
-  competidor: true
-}, {
-  feature: "Capacidad de personalización",
-  vas: true,
-  competidor: false
+  feature: "Tamaño de pedido mínimo",
+  vas: {
+    value: "Flexible",
+    positive: true
+  },
+  competidor: {
+    value: "Elevado",
+    positive: false
+  }
 }, {
   feature: "Atención personalizada",
-  vas: true,
-  competidor: false
+  vas: {
+    value: "Directa con técnicos",
+    positive: true
+  },
+  competidor: {
+    value: "Call centers globales",
+    positive: false
+  }
 }, {
-  feature: "Apoyo técnico especializado",
-  vas: true,
-  competidor: true
+  feature: "Capacidad de adaptación",
+  vas: {
+    value: "Alta",
+    positive: true
+  },
+  competidor: {
+    value: "Limitada",
+    positive: false
+  }
 }];
 
 const Ventajas = () => {
@@ -136,37 +149,39 @@ const Ventajas = () => {
                   <TableCaption className="pb-4">Comparación con otros fabricantes de adhesivos</TableCaption>
                   <TableHeader>
                     <TableRow className="bg-gray-100 hover:bg-gray-100">
-                      <TableHead className="w-1/2 font-heading text-base text-vas-dark">Características</TableHead>
-                      <TableHead className="text-center font-heading text-base text-vas-dark">VAS Industrial</TableHead>
-                      <TableHead className="text-center font-heading text-base text-vas-dark">Competencia</TableHead>
+                      <TableHead className="w-1/3 font-heading text-base text-vas-dark">Características</TableHead>
+                      <TableHead className="w-1/3 text-center font-heading text-base text-vas-dark">VAS Industrial</TableHead>
+                      <TableHead className="w-1/3 text-center font-heading text-base text-vas-dark">Competencia</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {comparisonFeatures.map((item, idx) => <TableRow key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    {comparisonFeatures.map((item, idx) => (
+                      <TableRow key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                         <TableCell className="font-medium py-4">{item.feature}</TableCell>
                         <TableCell className="text-center py-4">
-                          {item.vas ? <div className="flex justify-center">
-                              <span className="bg-vas-bronze/10 p-1 rounded-full">
-                                <Check className="h-5 w-5 text-vas-bronze" />
-                              </span>
-                            </div> : <div className="flex justify-center">
-                              <span className="bg-gray-100 p-1 rounded-full">
-                                <X className="h-5 w-5 text-gray-400" />
-                              </span>
-                            </div>}
+                          <div className="flex flex-col items-center gap-1">
+                            <span className={cn("bg-vas-bronze/10 p-1 rounded-full", item.vas.positive ? "visible" : "hidden")}>
+                              <Check className="h-5 w-5 text-vas-bronze" />
+                            </span>
+                            <span>{item.vas.value}</span>
+                          </div>
                         </TableCell>
                         <TableCell className="text-center py-4">
-                          {item.competidor ? <div className="flex justify-center">
+                          <div className="flex flex-col items-center gap-1">
+                            {item.competidor.positive ? (
                               <span className="bg-gray-200 p-1 rounded-full">
                                 <Check className="h-5 w-5 text-gray-600" />
                               </span>
-                            </div> : <div className="flex justify-center">
+                            ) : (
                               <span className="bg-gray-100 p-1 rounded-full">
                                 <X className="h-5 w-5 text-gray-400" />
                               </span>
-                            </div>}
+                            )}
+                            <span>{item.competidor.value}</span>
+                          </div>
                         </TableCell>
-                      </TableRow>)}
+                      </TableRow>
+                    ))}
                   </TableBody>
                 </Table>
               </CardContent>
