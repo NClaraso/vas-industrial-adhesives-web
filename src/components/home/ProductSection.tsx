@@ -79,8 +79,7 @@ const ProductSection = () => {
               <div>
                 <Button 
                   asChild 
-                  variant="outline"
-                  className="bg-gradient-to-r from-gray-400 to-vas-bronze text-white hover:from-white hover:to-white hover:text-vas-bronze transition-all duration-300"
+                  className="font-medium bg-vas-bronze text-white hover:bg-white hover:text-vas-bronze transition-colors"
                 >
                   <Link to={`/productos#${product.id}`}>
                     Ver más
