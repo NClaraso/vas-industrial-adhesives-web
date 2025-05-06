@@ -5,40 +5,38 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Check, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Table } from "@/components/ui/table";
+
 const advantages = [{
-  title: 'Flexibilidad',
-  description: 'Nuestra producción adaptable nos permite ajustarnos a sus necesidades específicas.',
-  details: ['Lotes de producción adaptados a sus necesidades', 'Capacidad para atender pedidos urgentes', 'Ajuste de propiedades según sus requisitos', 'Adaptación a los cambios en sus procesos productivos'],
+  title: 'Producción nacional',
+  description: 'Fabricamos en España, lo que nos permite ofrecer tiempos de entrega reducidos y un control total sobre la calidad de nuestros productos.',
   color: 'bg-gray-50',
   number: '01'
 }, {
-  title: 'Desarrollo técnico propio',
-  description: 'Equipo de I+D dedicado a la creación de soluciones adhesivas innovadoras.',
-  details: ['Laboratorio equipado con tecnología avanzada', 'Equipo de químicos especializados', 'Desarrollo continuo de nuevas formulaciones', 'Capacidad de resolución de problemas específicos'],
+  title: 'Flexibilidad en fabricación',
+  description: 'Nos adaptamos a las necesidades específicas de cada cliente, con capacidad para fabricar lotes a medida, sin mínimos prohibitivos.',
   color: 'bg-vas-gray',
   textColor: 'text-white',
   number: '02'
 }, {
-  title: 'Alta calidad constante',
-  description: 'Estrictos controles de calidad que garantizan un producto fiable y consistente.',
-  details: ['Control de calidad en cada lote de producción', 'Selección rigurosa de materias primas', 'Procesos productivos estandarizados', 'Trazabilidad completa de los productos'],
+  title: 'Desarrollo técnico a medida',
+  description: 'Nuestro equipo técnico trabaja en estrecha colaboración con los clientes para desarrollar soluciones adhesivas optimizadas para cada aplicación.',
   color: 'bg-vas-bronze/10',
   number: '03'
 }, {
-  title: 'Entrega ágil',
-  description: 'Optimización logística para reducir tiempos de entrega y responder rápidamente.',
-  details: ['Gestión eficiente de la cadena de suministro', 'Stock estratégico de productos más demandados', 'Servicio de entrega urgente disponible', 'Planificación de entregas según sus necesidades'],
+  title: 'Entregas ágiles y fiables',
+  description: 'Gracias a nuestra producción local y sistema logístico optimizado, garantizamos entregas rápidas y puntuales, incluso en situaciones urgentes.',
   color: 'bg-vas-bronze',
   textColor: 'text-white',
   number: '04'
 }, {
-  title: 'Producción local',
-  description: 'Fabricación 100% española en nuestras instalaciones de Segovia.',
-  details: ['Reducción de la huella de carbono en transporte', 'Apoyo a la economía local y nacional', 'Comunicación directa y sin barreras', 'Visitas a fábrica disponibles para clientes'],
+  title: 'Asesoramiento técnico experto',
+  description: 'Ofrecemos soporte técnico continuo, desde la selección del adhesivo adecuado hasta la optimización de procesos en la línea de producción.',
   color: 'bg-gray-100',
   number: '05'
 }];
+
 const comparisonFeatures = [{
   feature: "Flexibilidad en pedidos",
   vas: true,
@@ -76,6 +74,7 @@ const comparisonFeatures = [{
   vas: true,
   competidor: true
 }];
+
 const Ventajas = () => {
   return <Layout>
       {/* Hero Section */}
