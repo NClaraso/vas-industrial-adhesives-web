@@ -67,7 +67,7 @@ const Productos = () => {
           </div>
 
           <div className="space-y-20">
-            {industryProducts.map((industry, index) => <section key={industry.id} id={industry.id} className={`pt-10 pb-10 ${industry.bgColor} rounded-lg`}>
+            {industryProducts.map((industry, index) => <section key={industry.id} id={industry.id} className="">
                 <div className="container-custom">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div className={`order-${index % 2 === 0 ? '1' : '2'} lg:order-1`}>
