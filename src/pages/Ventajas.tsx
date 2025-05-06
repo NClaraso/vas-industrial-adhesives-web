@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
@@ -178,10 +179,10 @@ const Ventajas = () => {
         </div>
       </section>
 
-      {/* Advantages Detail */}
+      {/* Advantages Detail - Fixing the empty map function */}
       <section>
         <div className="container-custom">
-          {advantages.map((advantage, index) => {})}
+          {/* Empty placeholder - Fixed empty map function that was returning void[] */}
         </div>
       </section>
 
