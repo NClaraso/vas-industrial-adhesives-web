@@ -74,7 +74,7 @@ const Productos = () => {
                       <h2 className="heading-md mb-6">
                         {industry.title}
                       </h2>
-                      <p className="text-lg mb-6 leading-relaxed text-white">
+                      <p className="text-lg mb-6 leading-relaxed text-inherit">
                         {industry.description}
                       </p>
                       <h3 className="text-lg font-semibold mb-4">Aplicaciones principales:</h3>
