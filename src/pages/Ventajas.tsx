@@ -3,8 +3,18 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, X, Table } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Card, CardContent } from '@/components/ui/card';
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 const advantages = [
   {
@@ -16,8 +26,6 @@ const advantages = [
       'Ajuste de propiedades según sus requisitos',
       'Adaptación a los cambios en sus procesos productivos',
     ],
-    image: 'flexible-production.jpg',
-    bgColor: 'bg-white',
     color: 'bg-gray-50',
     number: '01',
   },
@@ -30,8 +38,6 @@ const advantages = [
       'Desarrollo continuo de nuevas formulaciones',
       'Capacidad de resolución de problemas específicos',
     ],
-    image: 'technical-development.jpg',
-    bgColor: 'bg-gray-50',
     color: 'bg-vas-gray',
     textColor: 'text-white',
     number: '02',
@@ -45,8 +51,6 @@ const advantages = [
       'Procesos productivos estandarizados',
       'Trazabilidad completa de los productos',
     ],
-    image: 'quality-control.jpg',
-    bgColor: 'bg-white',
     color: 'bg-vas-bronze/10',
     number: '03',
   },
@@ -59,8 +63,6 @@ const advantages = [
       'Servicio de entrega urgente disponible',
       'Planificación de entregas según sus necesidades',
     ],
-    image: 'fast-delivery.jpg',
-    bgColor: 'bg-gray-50',
     color: 'bg-vas-bronze',
     textColor: 'text-white',
     number: '04',
@@ -74,11 +76,21 @@ const advantages = [
       'Comunicación directa y sin barreras',
       'Visitas a fábrica disponibles para clientes',
     ],
-    image: 'local-production.jpg',
-    bgColor: 'bg-white',
     color: 'bg-gray-100',
     number: '05',
   },
+];
+
+const comparisonFeatures = [
+  { feature: "Flexibilidad en pedidos", vas: true, competidor: false },
+  { feature: "Desarrollo técnico propio", vas: true, competidor: false },
+  { feature: "Producción local (España)", vas: true, competidor: false },
+  { feature: "Servicio de entrega urgente", vas: true, competidor: true },
+  { feature: "Adaptación de formulaciones", vas: true, competidor: false },
+  { feature: "Control de calidad por lote", vas: true, competidor: true },
+  { feature: "Capacidad de personalización", vas: true, competidor: false },
+  { feature: "Atención personalizada", vas: true, competidor: false },
+  { feature: "Apoyo técnico especializado", vas: true, competidor: true },
 ];
 
 const Ventajas = () => {
@@ -101,7 +113,7 @@ const Ventajas = () => {
         </div>
       </section>
 
-      {/* Advantages Overview */}
+      {/* Advantages Cards */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -137,13 +149,83 @@ const Ventajas = () => {
         </div>
       </section>
 
+      {/* Tabla comparativa */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="heading-lg mb-6">Comparativa con la competencia</h2>
+              <p className="text-lg text-gray-600">
+                Vea cómo nos comparamos con otros fabricantes de adhesivos hot melt del mercado.
+              </p>
+            </div>
+
+            <Card className="shadow-lg border-none">
+              <CardContent className="p-0 overflow-hidden">
+                <Table>
+                  <TableCaption className="pb-4">Comparación con otros fabricantes de adhesivos</TableCaption>
+                  <TableHeader>
+                    <TableRow className="bg-gray-100 hover:bg-gray-100">
+                      <TableHead className="w-1/2 font-heading text-base text-vas-dark">Características</TableHead>
+                      <TableHead className="text-center font-heading text-base text-vas-dark">VAS Industrial</TableHead>
+                      <TableHead className="text-center font-heading text-base text-vas-dark">Competencia</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {comparisonFeatures.map((item, idx) => (
+                      <TableRow key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                        <TableCell className="font-medium py-4">{item.feature}</TableCell>
+                        <TableCell className="text-center py-4">
+                          {item.vas ? (
+                            <div className="flex justify-center">
+                              <span className="bg-vas-bronze/10 p-1 rounded-full">
+                                <Check className="h-5 w-5 text-vas-bronze" />
+                              </span>
+                            </div>
+                          ) : (
+                            <div className="flex justify-center">
+                              <span className="bg-gray-100 p-1 rounded-full">
+                                <X className="h-5 w-5 text-gray-400" />
+                              </span>
+                            </div>
+                          )}
+                        </TableCell>
+                        <TableCell className="text-center py-4">
+                          {item.competidor ? (
+                            <div className="flex justify-center">
+                              <span className="bg-gray-200 p-1 rounded-full">
+                                <Check className="h-5 w-5 text-gray-600" />
+                              </span>
+                            </div>
+                          ) : (
+                            <div className="flex justify-center">
+                              <span className="bg-gray-100 p-1 rounded-full">
+                                <X className="h-5 w-5 text-gray-400" />
+                              </span>
+                            </div>
+                          )}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+
+            <div className="mt-8 text-center">
+              <p className="text-gray-600 mb-6">Las ventajas de VAS Industrial son claras. Nuestro enfoque en la personalización, la calidad y el servicio nos distingue de la competencia.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Advantages Detail */}
       <section>
         <div className="container-custom">
           {advantages.map((advantage, index) => (
             <div 
               key={index} 
-              className={`py-20 ${advantage.bgColor}`}
+              className={`py-20 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className={index % 2 === 1 ? 'order-2 lg:order-1' : ''}>
@@ -165,7 +247,7 @@ const Ventajas = () => {
                   </ul>
                 </div>
                 <div className={index % 2 === 1 ? 'order-1 lg:order-2' : ''}>
-                  <div className="rounded-lg overflow-hidden bg-vas-gray relative aspect-video">
+                  <div className="rounded-lg overflow-hidden bg-vas-gray/90 relative aspect-video">
                     <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <span className="text-white/90 text-xl font-heading">Imagen de {advantage.title}</span>
@@ -194,7 +276,7 @@ const Ventajas = () => {
             <Button 
               asChild 
               size="lg" 
-              className="bg-vas-bronze hover:bg-vas-bronze/90 text-white"
+              className="bg-vas-bronze text-white hover:bg-white hover:text-vas-bronze transition-colors"
             >
               <Link to="/contacto">
                 Solicitar información
