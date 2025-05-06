@@ -18,15 +18,15 @@ const products = [
     id: 'madera',
     title: 'Industria de la Madera',
     description: 'Soluciones adhesivas para encolado de cantos, recubrimiento de perfiles y montaje de muebles.',
-    color: 'bg-gray-800',
-    textColor: 'text-white',
+    color: 'bg-gray-200', // Lighter background
+    textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
   {
     id: 'higiene',
     title: 'Higiene y No-tejidos',
     description: 'Adhesivos especializados para la fabricación de productos de higiene personal y no-tejidos.',
-    color: 'bg-gray-200',
+    color: 'bg-gray-100',
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
@@ -42,8 +42,8 @@ const products = [
     id: 'ensamblaje',
     title: 'Ensamblaje Técnico',
     description: 'Soluciones para uniones técnicamente exigentes en diversos procesos industriales.',
-    color: 'bg-vas-dark',
-    textColor: 'text-white',
+    color: 'bg-gray-200', // Lighter background
+    textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
 ];
@@ -64,30 +64,30 @@ const ProductSection = () => {
             <div 
               key={product.id}
               className={cn(
-                "rounded-lg p-8 transition-transform hover:shadow-lg hover:-translate-y-1",
+                "rounded-lg p-8 transition-transform hover:shadow-lg hover:-translate-y-1 flex flex-col justify-between",
                 product.color,
                 product.textColor
               )}
             >
-              <div className="mb-4">{product.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{product.title}</h3>
-              <p className={cn("mb-6", product.textColor === 'text-white' ? 'text-gray-300' : 'text-gray-600')}>
-                {product.description}
-              </p>
-              <Button 
-                asChild 
-                variant={product.textColor === 'text-white' ? 'outline' : 'default'}
-                className={cn(
-                  product.textColor === 'text-white' 
-                    ? 'border-white/30 text-white hover:bg-white/10' 
-                    : 'bg-vas-bronze hover:bg-vas-bronze/90 text-white'
-                )}
-              >
-                <Link to={`/productos#${product.id}`}>
-                  Ver más
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <div>
+                <div className="mb-4">{product.icon}</div>
+                <h3 className="text-xl font-bold mb-3">{product.title}</h3>
+                <p className="mb-6 text-gray-600">
+                  {product.description}
+                </p>
+              </div>
+              <div>
+                <Button 
+                  asChild 
+                  variant="outline"
+                  className="bg-gradient-to-r from-gray-400 to-vas-bronze text-white hover:from-white hover:to-white hover:text-vas-bronze transition-all duration-300"
+                >
+                  <Link to={`/productos#${product.id}`}>
+                    Ver más
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           ))}
         </div>
