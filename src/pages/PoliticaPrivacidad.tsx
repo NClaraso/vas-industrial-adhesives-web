@@ -1,11 +1,8 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
-
 const PoliticaPrivacidad = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-vas-dark text-white relative">
         {/* Background Pattern */}
@@ -25,7 +22,9 @@ const PoliticaPrivacidad = () => {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto prose prose-lg">
             <h2>RESPONSABLE</h2>
-            <p>La entidad responsable del tratamiento de tus datos personales es VAS INDUSTRIAL, con NIF XXXXXXXX y domicilio fiscal en C. los Gremios Segovianos, 7 (Parc. 4) 40195 Segovia, España.</p>
+            <p>La entidad responsable del tratamiento de tus datos personales es VAS INDUSTRIAL, con NIF XXXXXXXX y domicilio fiscal en C. los Gremios Segovianos, 7 (Parc. 4) 40195 Segovia, España.
+
+          </p>
             
             <h2>¿CON QUÉ FINALIDAD TRATAMOS TUS DATOS?</h2>
             <p>Los datos personales que nos facilitas serán tratados con las siguientes finalidades:</p>
@@ -35,7 +34,9 @@ const PoliticaPrivacidad = () => {
               <li>Envío de comunicaciones comerciales sobre nuestros productos, actividades y servicios, siempre que hayas dado tu consentimiento.</li>
               <li>Facilitar información sobre productos que comercializamos.</li>
               <li>Gestión administrativa, facturación, contabilidad y obligaciones legales.</li>
-              <li>Mejorar nuestros servicios mediante el estudio de la información facilitada.</li>
+              <li>Mejorar nuestros servicios mediante el estudio de la información facilitada.
+
+            </li>
             </ul>
             
             <h2>¿CUÁL ES LA LEGITIMACIÓN PARA EL TRATAMIENTO DE TUS DATOS?</h2>
@@ -52,14 +53,20 @@ const PoliticaPrivacidad = () => {
             <p>No cederemos tus datos a terceros, salvo obligación legal. Sin embargo, para la prestación del servicio, es posible que algunos de tus datos deban ser comunicados a las siguientes categorías de destinatarios:</p>
             <ul>
               <li>Proveedores de servicios necesarios para nuestra actividad.</li>
-              <li>Administraciones públicas y organismos oficiales, cuando así lo exija la normativa aplicable.</li>
+              <li>Administraciones públicas y organismos oficiales, cuando así lo exija la normativa aplicable.
+
+            </li>
             </ul>
 
             <h2>¿CUÁNTO TIEMPO CONSERVAREMOS TUS DATOS?</h2>
-            <p>Conservaremos tus datos mientras se mantenga la relación contigo o durante los años necesarios para cumplir con las obligaciones legales. Una vez finalizados los tratamientos, los datos serán debidamente bloqueados y posteriormente eliminados.</p>
+            <p>Conservaremos tus datos mientras se mantenga la relación contigo o durante los años necesarios para cumplir con las obligaciones legales. Una vez finalizados los tratamientos, los datos serán debidamente bloqueados y posteriormente eliminados.
+
+          </p>
             
             <h2>¿CUÁLES SON TUS DERECHOS?</h2>
-            <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad dirigiéndote a VAS INDUSTRIAL, en la dirección C. los Gremios Segovianos, 7 (Parc. 4) 40195 Segovia, España o por correo electrónico a info@vasindustrial.es.</p>
+            <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad dirigiéndote a VAS INDUSTRIAL, en la dirección C. los Gremios Segovianos, 7 (Parc. 4) 40195 Segovia, España o por correo electrónico a info@vasindustrial.es.
+
+          </p>
             
             <p>En caso de considerar vulnerado tu derecho a la protección de datos personales, podrás presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).</p>
 
@@ -70,8 +77,6 @@ const PoliticaPrivacidad = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default PoliticaPrivacidad;
