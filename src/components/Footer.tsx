@@ -1,8 +1,11 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  
   return <footer className="bg-vas-dark text-white pt-16 pb-8">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -104,7 +107,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-vas-bronze mr-3 mt-0.5" />
-                <span className="text-gray-300">Segovia, España</span>
+                <span className="text-gray-300">C. los Gremios Segovianos, 7 (Parc. 4) 40195 Segovia, España</span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 text-vas-bronze mr-3" />
@@ -131,19 +134,14 @@ const Footer = () => {
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6 text-sm">
               <li>
-                <a href="#" className="text-gray-400 hover:text-vas-bronze transition-colors duration-200">
+                <Link to="/politica-privacidad" className="text-gray-400 hover:text-vas-bronze transition-colors duration-200">
                   Política de Privacidad
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-vas-bronze transition-colors duration-200">
+                <Link to="/aviso-legal" className="text-gray-400 hover:text-vas-bronze transition-colors duration-200">
                   Aviso Legal
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-vas-bronze transition-colors duration-200">
-                  Cookies
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -151,4 +149,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
