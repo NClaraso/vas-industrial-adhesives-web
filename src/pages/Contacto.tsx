@@ -7,6 +7,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/components/ui/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import Map from '@/components/Map';
+
 const Contacto = () => {
   const {
     toast
@@ -21,6 +23,7 @@ const Contacto = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -31,12 +34,14 @@ const Contacto = () => {
       [name]: value
     }));
   };
+  
   const handleSelectChange = (value: string) => {
     setFormData(prev => ({
       ...prev,
       industry: value
     }));
   };
+  
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -61,6 +66,7 @@ const Contacto = () => {
       });
     }, 1500);
   };
+  
   return <Layout>
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-vas-dark text-white relative">
@@ -209,9 +215,7 @@ const Contacto = () => {
               </div>
               
               <div className="relative h-80 rounded-lg overflow-hidden">
-                <div className="absolute inset-0 bg-vas-gray flex items-center justify-center">
-                  <span className="text-white/90 text-xl font-heading">Mapa de ubicación</span>
-                </div>
+                <Map address="C. los Gremios Segovianos, 7 (Parc. 4) 40195 Segovia - España" className="w-full h-full" />
               </div>
             </div>
           </div>
