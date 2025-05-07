@@ -1,9 +1,7 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Check } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-
 const SobreNosotros = () => {
   return <Layout>
       {/* Hero Section */}
@@ -40,12 +38,10 @@ const SobreNosotros = () => {
         </div>
       </section>
       
-      <div className="container-custom py-6">
-        <Separator className="bg-vas-bronze/30" />
-      </div>
+      
 
       {/* Team Experience */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-200">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <h2 className="heading-lg mb-6">
@@ -78,9 +74,7 @@ const SobreNosotros = () => {
         </div>
       </section>
       
-      <div className="container-custom py-6">
-        <Separator className="bg-vas-bronze/30" />
-      </div>
+      
 
       {/* Industrial Focus */}
       <section className="section-padding bg-white">
