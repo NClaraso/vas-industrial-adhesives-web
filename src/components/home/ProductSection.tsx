@@ -10,7 +10,7 @@ const products = [
     id: 'packaging',
     title: 'Packaging y Embalaje',
     description: 'Adhesivos hot melt para cerrado de cajas, formado de bandejas y encolado de estuches en la industria del packaging.',
-    color: 'bg-gray-100',
+    color: 'bg-gray-50', // Lightest gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
@@ -18,7 +18,7 @@ const products = [
     id: 'madera',
     title: 'Industria de la Madera',
     description: 'Soluciones adhesivas para encolado de cantos, recubrimiento de perfiles y montaje de muebles.',
-    color: 'bg-gray-200', // Lighter background
+    color: 'bg-gray-100', // Light gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
@@ -26,7 +26,7 @@ const products = [
     id: 'higiene',
     title: 'Higiene y No-tejidos',
     description: 'Adhesivos especializados para la fabricación de productos de higiene personal y no-tejidos.',
-    color: 'bg-gray-100',
+    color: 'bg-amber-50', // Very light amber (transitioning to copper)
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
@@ -34,7 +34,7 @@ const products = [
     id: 'automocion',
     title: 'Automoción',
     description: 'Adhesivos de alto rendimiento para aplicaciones en la industria automotriz y componentes.',
-    color: 'bg-vas-bronze/10',
+    color: 'bg-amber-100', // Light amber (closer to copper)
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
@@ -42,7 +42,7 @@ const products = [
     id: 'ensamblaje',
     title: 'Ensamblaje Técnico',
     description: 'Soluciones para uniones técnicamente exigentes en diversos procesos industriales.',
-    color: 'bg-gray-200', // Lighter background
+    color: 'bg-vas-bronze/20', // Light copper (vas-bronze with low opacity)
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
