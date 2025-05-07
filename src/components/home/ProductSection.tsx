@@ -26,7 +26,7 @@ const products = [
     id: 'higiene',
     title: 'Higiene y No-tejidos',
     description: 'Adhesivos especializados para la fabricación de productos de higiene personal y no-tejidos.',
-    color: 'bg-amber-50', // Very light amber (transitioning to copper)
+    color: 'bg-gray-200', // Medium gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
@@ -34,7 +34,7 @@ const products = [
     id: 'automocion',
     title: 'Automoción',
     description: 'Adhesivos de alto rendimiento para aplicaciones en la industria automotriz y componentes.',
-    color: 'bg-amber-100', // Light amber (closer to copper)
+    color: 'bg-gray-300', // Dark gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
@@ -42,7 +42,7 @@ const products = [
     id: 'ensamblaje',
     title: 'Ensamblaje Técnico',
     description: 'Soluciones para uniones técnicamente exigentes en diversos procesos industriales.',
-    color: 'bg-vas-bronze/20', // Light copper (vas-bronze with low opacity)
+    color: 'bg-gray-400', // Darker gray but not too dark
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
