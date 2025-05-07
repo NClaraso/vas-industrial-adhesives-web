@@ -110,9 +110,7 @@ const SobreNosotros = () => {
         </div>
       </section>
       
-      <div className="container-custom py-6">
-        <Separator className="bg-vas-bronze/30" />
-      </div>
+      
 
       {/* Values */}
       <section className="section-padding bg-vas-dark text-white">
