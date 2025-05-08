@@ -13,7 +13,6 @@ const products = [
     color: 'bg-gray-50', // Lightest gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
-    image: "/lovable-uploads/53d0816c-db7d-4afd-b80e-2b2cd3eeb9e0.png"
   },
   {
     id: 'madera',
@@ -22,7 +21,6 @@ const products = [
     color: 'bg-gray-100', // Light gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
-    image: "/lovable-uploads/e1a30602-a817-4d2d-a3b2-eb4ff0954c6a.png"
   },
   {
     id: 'higiene',
@@ -31,7 +29,6 @@ const products = [
     color: 'bg-gray-200', // Medium gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
-    image: "/lovable-uploads/55789805-53b6-4b5a-9219-609450beb908.png"
   },
   {
     id: 'automocion',
@@ -40,7 +37,6 @@ const products = [
     color: 'bg-gray-100', // Changed from yellow-50 back to gray-100
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
-    image: "/lovable-uploads/8c5c053e-61b3-4720-8336-3bb24adb9936.png"
   },
   {
     id: 'ensamblaje',
@@ -49,7 +45,6 @@ const products = [
     color: 'bg-gray-200', // Changed from yellow-600 back to gray-200
     textColor: 'text-vas-dark', // Changed back from white to vas-dark
     icon: <Package className="w-8 h-8 text-vas-bronze" />, // Changed back from white to vas-bronze
-    image: "/lovable-uploads/a3230f06-b664-4249-8b21-e6d7c7a06bd8.png"
   },
 ];
 
@@ -75,15 +70,7 @@ const ProductSection = () => {
               )}
             >
               <div>
-                <div className="mb-4 h-48 rounded-md overflow-hidden bg-gradient-to-br from-vas-bronze/10 to-vas-dark/50 relative">
-                  {product.image && (
-                    <img 
-                      src={product.image} 
-                      alt={product.title} 
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
+                <div className="mb-4">{product.icon}</div>
                 <h3 className="text-xl font-bold mb-3">{product.title}</h3>
                 <p className="mb-6 text-gray-600">
                   {product.description}
