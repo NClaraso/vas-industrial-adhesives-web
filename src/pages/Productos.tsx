@@ -1,39 +1,47 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Package } from 'lucide-react';
+
 const industryProducts = [{
   id: 'packaging',
   title: 'Packaging y Embalaje',
   description: 'Adhesivos hot melt para la industria del packaging y embalaje, ideales para cerrado de cajas, formado de bandejas y encolado de estuches.',
   applications: ['Cerrado de cajas de cartón', 'Encolado de estuches', 'Adhesivos para etiquetas', 'Formación de bandejas', 'Packaging alimentario'],
-  bgColor: 'bg-vas-gray'
+  bgColor: 'bg-vas-gray',
+  image: "/lovable-uploads/53d0816c-db7d-4afd-b80e-2b2cd3eeb9e0.png"
 }, {
   id: 'madera',
   title: 'Industria de la Madera',
   description: 'Soluciones adhesivas para la industria del mueble y la madera, con aplicaciones en encolado de cantos, recubrimiento de perfiles y montaje.',
   applications: ['Encolado de cantos', 'Recubrimiento de perfiles', 'Montaje de muebles', 'Uniones de madera', 'Laminación de superficies'],
-  bgColor: 'bg-white'
+  bgColor: 'bg-white',
+  image: "/lovable-uploads/e1a30602-a817-4d2d-a3b2-eb4ff0954c6a.png"
 }, {
   id: 'higiene',
   title: 'Higiene y No-tejidos',
   description: 'Adhesivos especializados para la fabricación de productos de higiene personal y aplicaciones en materiales no-tejidos.',
   applications: ['Pañales y productos de incontinencia', 'Productos femeninos', 'Toallitas húmedas', 'Productos médicos desechables', 'Tejidos técnicos'],
-  bgColor: 'bg-gray-50'
+  bgColor: 'bg-gray-50',
+  image: "/lovable-uploads/55789805-53b6-4b5a-9219-609450beb908.png"
 }, {
   id: 'automocion',
   title: 'Automoción',
   description: 'Adhesivos hot melt de alto rendimiento para aplicaciones en la industria automotriz y fabricación de componentes.',
   applications: ['Insonorización y antivibraciones', 'Montaje de componentes interiores', 'Unión de textiles y espumas', 'Sellado y protección', 'Fijación de cables'],
-  bgColor: 'bg-white'
+  bgColor: 'bg-white',
+  image: "/lovable-uploads/8c5c053e-61b3-4720-8336-3bb24adb9936.png"
 }, {
   id: 'ensamblaje',
   title: 'Ensamblaje Técnico',
   description: 'Soluciones para uniones técnicamente exigentes en diversos procesos industriales de ensamblaje y fabricación.',
   applications: ['Montaje de componentes electrónicos', 'Unión de plásticos técnicos', 'Aplicaciones de aislamiento', 'Fijación de componentes', 'Industria de electrodomésticos'],
-  bgColor: 'bg-gray-50'
+  bgColor: 'bg-gray-50',
+  image: "/lovable-uploads/a3230f06-b664-4249-8b21-e6d7c7a06bd8.png"
 }];
+
 const Productos = () => {
   return <Layout>
       {/* Hero Section */}
@@ -67,7 +75,8 @@ const Productos = () => {
           </div>
 
           <div className="space-y-20">
-            {industryProducts.map((industry, index) => <section key={industry.id} id={industry.id} className="">
+            {industryProducts.map((industry, index) => (
+              <section key={industry.id} id={industry.id} className="">
                 <div className="container-custom">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div className={`order-${index % 2 === 0 ? '1' : '2'} lg:order-1`}>
@@ -79,10 +88,12 @@ const Productos = () => {
                       </p>
                       <h3 className="text-lg font-semibold mb-4">Aplicaciones principales:</h3>
                       <ul className="space-y-3 mb-8">
-                        {industry.applications.map((app, idx) => <li key={idx} className="flex items-center">
+                        {industry.applications.map((app, idx) => (
+                          <li key={idx} className="flex items-center">
                             <span className="flex-shrink-0 w-1.5 h-1.5 bg-vas-bronze rounded-full mr-3"></span>
                             <span className="text-inherit">{app}</span>
-                          </li>)}
+                          </li>
+                        ))}
                       </ul>
                       <Button asChild className="bg-vas-bronze hover:bg-vas-bronze/90 text-white">
                         <Link to="/contacto">
@@ -93,15 +104,26 @@ const Productos = () => {
                     </div>
                     <div className={`order-${index % 2 === 0 ? '2' : '1'} lg:order-2 relative`}>
                       <div className="aspect-square rounded-lg overflow-hidden bg-vas-gray">
-                        <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80"></div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-white/90 text-xl font-heading">Imagen de {industry.title}</span>
-                        </div>
+                        {industry.image ? (
+                          <img 
+                            src={industry.image} 
+                            alt={`Imagen de ${industry.title}`}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <>
+                            <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80"></div>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <span className="text-white/90 text-xl font-heading">Imagen de {industry.title}</span>
+                            </div>
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
                 </div>
-              </section>)}
+              </section>
+            ))}
           </div>
         </div>
       </section>
@@ -134,10 +156,11 @@ const Productos = () => {
             </div>
             <div className="relative">
               <div className="aspect-video rounded-lg overflow-hidden bg-vas-gray">
-                <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white/90 text-xl font-heading">Imagen de laboratorio/desarrollo</span>
-                </div>
+                <img 
+                  src="/lovable-uploads/52853d3d-91e0-4be9-a392-d2ca51d74b10.png" 
+                  alt="Imagen de laboratorio/desarrollo"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -145,4 +168,5 @@ const Productos = () => {
       </section>
     </Layout>;
 };
+
 export default Productos;
