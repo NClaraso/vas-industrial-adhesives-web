@@ -34,7 +34,7 @@ const products = [
     id: 'automocion',
     title: 'Automoción',
     description: 'Adhesivos de alto rendimiento para aplicaciones en la industria automotriz y componentes.',
-    color: 'bg-gray-300', // Dark gray
+    color: 'bg-yellow-50', // Light yellow (replacing gray-300)
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
@@ -42,9 +42,9 @@ const products = [
     id: 'ensamblaje',
     title: 'Ensamblaje Técnico',
     description: 'Soluciones para uniones técnicamente exigentes en diversos procesos industriales.',
-    color: 'bg-gray-400', // Darker gray but not too dark
-    textColor: 'text-vas-dark',
-    icon: <Package className="w-8 h-8 text-vas-bronze" />,
+    color: 'bg-yellow-600', // Darker yellow (replacing gray-400)
+    textColor: 'text-white', // Changed to white
+    icon: <Package className="w-8 h-8 text-white" />, // Changed to white
   },
 ];
 
