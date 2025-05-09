@@ -1,39 +1,52 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Package } from 'lucide-react';
+
 const industryProducts = [{
   id: 'packaging',
   title: 'Packaging y Embalaje',
   description: 'Adhesivos hot melt para la industria del packaging y embalaje, ideales para cerrado de cajas, formado de bandejas y encolado de estuches.',
   applications: ['Cerrado de cajas de cartón', 'Encolado de estuches', 'Adhesivos para etiquetas', 'Formación de bandejas', 'Packaging alimentario'],
-  bgColor: 'bg-vas-gray'
+  bgColor: 'bg-vas-gray',
+  image: '/lovable-uploads/fad9b0d0-bff6-4013-a4a4-481c21936615.png',
+  alt: 'Cajas de cartón en una cinta transportadora en una fábrica de packaging'
 }, {
   id: 'madera',
   title: 'Industria de la Madera',
   description: 'Soluciones adhesivas para la industria del mueble y la madera, con aplicaciones en encolado de cantos, recubrimiento de perfiles y montaje.',
   applications: ['Encolado de cantos', 'Recubrimiento de perfiles', 'Montaje de muebles', 'Uniones de madera', 'Laminación de superficies'],
-  bgColor: 'bg-white'
+  bgColor: 'bg-white',
+  image: '/lovable-uploads/c2e0bec5-ea8a-4794-991f-473cf5c74c2b.png',
+  alt: 'Trabajo de precisión en madera con herramienta industrial'
 }, {
   id: 'higiene',
   title: 'Higiene y No-tejidos',
   description: 'Adhesivos especializados para la fabricación de productos de higiene personal y aplicaciones en materiales no-tejidos.',
   applications: ['Pañales y productos de incontinencia', 'Productos femeninos', 'Toallitas húmedas', 'Productos médicos desechables', 'Tejidos técnicos'],
-  bgColor: 'bg-gray-50'
+  bgColor: 'bg-gray-50',
+  image: '/lovable-uploads/c98aa73f-f959-444c-9e98-f1d3b8b789e0.png',
+  alt: 'Rollos de material no tejido en una instalación industrial de productos de higiene'
 }, {
   id: 'automocion',
   title: 'Automoción',
   description: 'Adhesivos hot melt de alto rendimiento para aplicaciones en la industria automotriz y fabricación de componentes.',
   applications: ['Insonorización y antivibraciones', 'Montaje de componentes interiores', 'Unión de textiles y espumas', 'Sellado y protección', 'Fijación de cables'],
-  bgColor: 'bg-white'
+  bgColor: 'bg-white',
+  image: '/lovable-uploads/4e95326e-0ba7-442f-9197-f0b33ab63daa.png',
+  alt: 'Automóvil en una línea de producción con brazos robóticos'
 }, {
   id: 'ensamblaje',
   title: 'Ensamblaje Técnico',
   description: 'Soluciones para uniones técnicamente exigentes en diversos procesos industriales de ensamblaje y fabricación.',
   applications: ['Montaje de componentes electrónicos', 'Unión de plásticos técnicos', 'Aplicaciones de aislamiento', 'Fijación de componentes', 'Industria de electrodomésticos'],
-  bgColor: 'bg-gray-50'
+  bgColor: 'bg-gray-50',
+  image: '/lovable-uploads/e459fccd-a325-473c-a138-9747eb824bdb.png',
+  alt: 'Componente electrónico con acabado metálico y esferas en superficie'
 }];
+
 const Productos = () => {
   return <Layout>
       {/* Hero Section */}
@@ -93,10 +106,12 @@ const Productos = () => {
                     </div>
                     <div className={`order-${index % 2 === 0 ? '2' : '1'} lg:order-2 relative`}>
                       <div className="aspect-square rounded-lg overflow-hidden bg-vas-gray">
-                        <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80"></div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-white/90 text-xl font-heading">Imagen de {industry.title}</span>
-                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80 opacity-40"></div>
+                        <img 
+                          src={industry.image}
+                          alt={industry.alt}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     </div>
                   </div>
