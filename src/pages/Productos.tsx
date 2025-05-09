@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
@@ -129,32 +128,22 @@ const Productos = () => {
         </div>
         
         <div className="container-custom relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="heading-lg mb-6">
-                Soluciones adhesivas <span className="text-vas-bronze">a medida</span>
-              </h2>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Si no encuentra el adhesivo hot melt que necesita para su aplicación específica, nuestro equipo técnico puede desarrollar una solución personalizada adaptada a sus requisitos particulares.
-              </p>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                Contacte con nosotros para analizar su caso y trabajar juntos en el desarrollo de un adhesivo que responda exactamente a sus necesidades.
-              </p>
-              <Button asChild size="lg" className="bg-vas-bronze hover:bg-vas-bronze/90 text-white">
-                <Link to="/contacto">
-                  Consultar desarrollo a medida
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-            <div className="relative">
-              <div className="aspect-video rounded-lg overflow-hidden bg-vas-gray">
-                <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white/90 text-xl font-heading">Imagen de laboratorio/desarrollo</span>
-                </div>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="heading-lg mb-6">
+              Soluciones adhesivas <span className="text-vas-bronze">a medida</span>
+            </h2>
+            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              Si no encuentra el adhesivo hot melt que necesita para su aplicación específica, nuestro equipo técnico puede desarrollar una solución personalizada adaptada a sus requisitos particulares.
+            </p>
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+              Contacte con nosotros para analizar su caso y trabajar juntos en el desarrollo de un adhesivo que responda exactamente a sus necesidades.
+            </p>
+            <Button asChild size="lg" className="bg-vas-bronze hover:bg-vas-bronze/90 text-white">
+              <Link to="/contacto">
+                Consultar desarrollo a medida
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
