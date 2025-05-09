@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -43,18 +42,9 @@ const About = () => {
           <div className="relative">
             <div className="aspect-square overflow-hidden rounded-lg bg-vas-gray">
               <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80 opacity-40"></div>
-              <img 
-                src="/lovable-uploads/389400c6-1e51-4ae1-9e32-588140e71e3c.png" 
-                alt="Interior de un almacén con cajas y palets" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/389400c6-1e51-4ae1-9e32-588140e71e3c.png" alt="Interior de un almacén con cajas y palets" className="w-full h-full object-cover" />
             </div>
-            <div className="absolute -bottom-8 -left-8 w-3/4 aspect-video bg-vas-dark rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-tr from-vas-bronze/20 to-vas-dark/80"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-white/90 text-xl font-heading">Imagen de producto</span>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
