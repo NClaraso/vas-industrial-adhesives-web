@@ -12,7 +12,9 @@ const Map: React.FC<MapProps> = ({ address, className = "h-full w-full" }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const marker = useRef<mapboxgl.Marker | null>(null);
-  const [mapboxToken, setMapboxToken] = useState<string | null>(localStorage.getItem('mapbox-token'));
+  const [mapboxToken, setMapboxToken] = useState<string | null>(
+    localStorage.getItem('mapbox-token') || "pk.eyJ1IjoibmNsYXJhc28iLCJhIjoiY21hZjN2bDlsMDF5MDJxc2ZsdG85M3ptaiJ9.UjccsdZHPeqheuPUZl0yNA"
+  );
 
   const initializeMap = (token: string, coordinates: [number, number]) => {
     if (!mapContainer.current) return;
