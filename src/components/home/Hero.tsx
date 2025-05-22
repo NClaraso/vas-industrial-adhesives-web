@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-
 const Hero = () => {
   return <section className="relative bg-vas-dark min-h-screen flex items-center">
       {/* Background Pattern */}
@@ -17,9 +15,7 @@ const Hero = () => {
           <h1 className="heading-xl text-white mb-6">
             <span className="text-vas-bronze">Adhesivos Hot Melt</span> para la industria
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-            Fabricamos adhesivos hot melt de alta calidad para sectores industriales como packaging, madera, automoción, higiene y ensamblaje técnico. Combinamos experiencia técnica con producción ágil y soluciones a medida.
-          </p>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">Somos fabricantes de adhesivos hot melt de alta calidad para sectores industriales como packaging, etiquetado, encuadernación,embalaje flexible, laminación de papel y aplicaciones técnicas.</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-vas-bronze hover:bg-vas-bronze/90 text-white">
               <Link to="/contacto">
