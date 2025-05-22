@@ -19,7 +19,7 @@ const About = () => {
                 <span className="flex-shrink-0 bg-vas-bronze/10 p-1 rounded-full mr-3 mt-1">
                   <Check className="h-4 w-4 text-vas-bronze" />
                 </span>
-                <span className="text-gray-700">Fábrica propia en Segovia con producción 100% nacional</span>
+                <span className="text-gray-700">Instalaciones propias en Segovia con producción 100% nacional</span>
               </li>
               <li className="flex items-start">
                 <span className="flex-shrink-0 bg-vas-bronze/10 p-1 rounded-full mr-3 mt-1">
