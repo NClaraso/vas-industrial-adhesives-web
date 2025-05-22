@@ -93,7 +93,7 @@ const Productos = () => {
                         {industry.title}
                       </h2>
                       
-                      <h3 className="text-lg font-semibold mb-4">Aplicaciones principales:</h3>
+                      
                       <ul className="space-y-3 mb-8">
                         {industry.applications.map((app, idx) => <li key={idx} className="flex items-center">
                             <span className="flex-shrink-0 w-1.5 h-1.5 bg-vas-bronze rounded-full mr-3"></span>
