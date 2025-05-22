@@ -34,7 +34,7 @@ const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
             <div className="bg-vas-gray/50 backdrop-blur-sm border border-white/10 p-6 rounded-lg">
               <h3 className="text-vas-bronze font-semibold text-lg mb-2">Confianza</h3>
-              <p className="text-gray-300">Adhesivos de calidad constante que aseguran un rendimiento óptimo en cada aplicación industrial.</p>
+              <p className="text-gray-300">Adhesivo con los más altos estándares de calidad desarrollados a medida para cada aplicación industrial.</p>
             </div>
             <div className="bg-vas-gray/50 backdrop-blur-sm border border-white/10 p-6 rounded-lg">
               <h3 className="text-vas-bronze font-semibold text-lg mb-2">Innovación</h3>
