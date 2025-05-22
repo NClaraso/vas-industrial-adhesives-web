@@ -1,8 +1,11 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Package } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+
 const industryProducts = [{
   id: 'packaging',
   title: 'Packaging y Embalaje',
@@ -52,6 +55,7 @@ const industryProducts = [{
   image: '/lovable-uploads/e459fccd-a325-473c-a138-9747eb824bdb.png',
   alt: 'Componente industrial en proceso de fabricación'
 }];
+
 const Productos = () => {
   return <Layout>
       {/* Hero Section */}
@@ -87,12 +91,11 @@ const Productos = () => {
           <div className="space-y-20">
             {industryProducts.map((industry, index) => <section key={industry.id} id={industry.id} className="">
                 <div className="container-custom">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <div className={`order-${index % 2 === 0 ? '1' : '2'} lg:order-1`}>
+                  <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+                    <div className={`order-${index % 2 === 0 ? '1' : '2'} lg:order-1 lg:col-span-3`}>
                       <h2 className="heading-md mb-6">
                         {industry.title}
                       </h2>
-                      
                       
                       <ul className="space-y-3 mb-8">
                         {industry.applications.map((app, idx) => <li key={idx} className="flex items-center">
@@ -107,10 +110,12 @@ const Productos = () => {
                         </Link>
                       </Button>
                     </div>
-                    <div className={`order-${index % 2 === 0 ? '2' : '1'} lg:order-2 relative`}>
-                      <div className="aspect-square rounded-lg overflow-hidden bg-vas-gray">
-                        <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80 opacity-40"></div>
-                        <img src={industry.image} alt={industry.alt} className="w-full h-full object-cover" />
+                    <div className={`order-${index % 2 === 0 ? '2' : '1'} lg:order-2 lg:col-span-2 relative`}>
+                      <div className="md:max-w-xs lg:max-w-sm mx-auto rounded-lg overflow-hidden bg-vas-gray">
+                        <AspectRatio ratio={4/3} className="w-full">
+                          <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80 opacity-40"></div>
+                          <img src={industry.image} alt={industry.alt} className="w-full h-full object-cover" />
+                        </AspectRatio>
                       </div>
                     </div>
                   </div>
