@@ -9,42 +9,50 @@ const products = [
   {
     id: 'packaging',
     title: 'Packaging y Embalaje',
-    description: 'Adhesivos hot melt para cerrado de cajas, formado de bandejas y encolado de estuches en la industria del packaging.',
+    description: 'Adhesivos hot melt para cerrado de cajas, formado de bandejas y conformado y montaje de estuches en la industria del packaging.',
     color: 'bg-gray-50', // Lightest gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
   {
-    id: 'madera',
-    title: 'Industria de la Madera',
-    description: 'Soluciones adhesivas para encolado de cantos, recubrimiento de perfiles y montaje de muebles.',
+    id: 'encuadernacion',
+    title: 'Encuadernación',
+    description: 'Adhesivos hot melt para encolado de volúmenes cosidos o fresados, encolado de cortesía, catálogos, revistas, dossiers con excelente adhesión.',
     color: 'bg-gray-100', // Light gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
   {
-    id: 'higiene',
-    title: 'Higiene y No-tejidos',
-    description: 'Adhesivos especializados para la fabricación de productos de higiene personal y no-tejidos.',
+    id: 'embalaje-flexible',
+    title: 'Embalaje Flexible',
+    description: 'Adhesivos hot melt para la fabricación en banderolaje de envases tipo yogurt y para termosellado de productos alimenticios.',
     color: 'bg-gray-200', // Medium gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
   {
-    id: 'automocion',
-    title: 'Automoción',
-    description: 'Adhesivos de alto rendimiento para aplicaciones en la industria automotriz y componentes.',
-    color: 'bg-gray-100', // Changed from yellow-50 back to gray-100
+    id: 'laminacion',
+    title: 'Adhesivos para Laminación y Recubrimientos',
+    description: 'Adhesivos hot melt para protección de envases celulósicos y laminaciones con efecto barrera.',
+    color: 'bg-gray-100', // Light gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
   {
-    id: 'ensamblaje',
-    title: 'Ensamblaje Técnico',
-    description: 'Soluciones para uniones técnicamente exigentes en diversos procesos industriales.',
-    color: 'bg-gray-200', // Changed from yellow-600 back to gray-200
-    textColor: 'text-vas-dark', // Changed back from white to vas-dark
-    icon: <Package className="w-8 h-8 text-vas-bronze" />, // Changed back from white to vas-bronze
+    id: 'etiquetado',
+    title: 'Etiquetado',
+    description: 'Adhesivos hot melt con alto poder de adhesión sobre etiquetas de papel, papel plastificado para máquinas automáticas.',
+    color: 'bg-gray-200', // Medium gray
+    textColor: 'text-vas-dark',
+    icon: <Package className="w-8 h-8 text-vas-bronze" />,
+  },
+  {
+    id: 'aplicaciones-tecnicas',
+    title: 'Aplicaciones Industriales y Técnicas',
+    description: 'Adhesivos hot melt especialmente diseñados para las más exigentes aplicaciones técnicas en todo tipo de industrias.',
+    color: 'bg-gray-100', // Light gray
+    textColor: 'text-vas-dark',
+    icon: <Package className="w-8 h-8 text-vas-bronze" />,
   },
 ];
 
