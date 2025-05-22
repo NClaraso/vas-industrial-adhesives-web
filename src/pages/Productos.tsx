@@ -12,48 +12,48 @@ const industryProducts = [{
   description: 'Adhesivos hot melt para cerrado de cajas, formado de bandejas y conformado y montaje de estuches en la industria del packaging.',
   applications: ['Cerrado de cajas de cartón', 'Conformado y cierre de estuches', 'Packaging en general'],
   bgColor: 'bg-vas-gray',
-  image: '/lovable-uploads/fad9b0d0-bff6-4013-a4a4-481c21936615.png',
-  alt: 'Cajas de cartón en una cinta transportadora en una fábrica de packaging'
+  image: '/lovable-uploads/bd8ebf19-a388-479e-bbde-f07bff05cc32.png',
+  alt: 'Envases de yogurt en una línea de producción industrial'
 }, {
   id: 'encuadernacion',
   title: 'Encuadernación',
   description: 'Adhesivos hot melt para encolado de volúmenes cosidos o fresados, encolado de cortesía, catálogos, revistas, dossiers con excelente adhesión.',
   applications: ['Encolado de lomos fresados o cosidos, en rústica y todo tipo de máquinas', 'Unión de laterales y pegados de cortesía en libros, revistas'],
   bgColor: 'bg-white',
-  image: '/lovable-uploads/c2e0bec5-ea8a-4794-991f-473cf5c74c2b.png',
-  alt: 'Trabajo de precisión en madera con herramienta industrial'
+  image: '/lovable-uploads/fe96b210-9c1a-42e3-bbb2-8e74312d6567.png',
+  alt: 'Proceso de encuadernación con una máquina de precisión láser sobre un libro'
 }, {
   id: 'embalaje-flexible',
   title: 'Embalaje Flexible',
   description: 'Adhesivos hot melt para la fabricación en banderolaje de envases tipo yogurt y para termosellado de productos alimenticios.',
   applications: ['Fabricación en banderolaje de envases tipo yogurt', 'Aplicaciones de termosellados de productos alimenticios'],
   bgColor: 'bg-gray-50',
-  image: '/lovable-uploads/c98aa73f-f959-444c-9e98-f1d3b8b789e0.png',
-  alt: 'Rollos de material no tejido en una instalación industrial de productos de higiene'
+  image: '/lovable-uploads/5b02870e-6f92-455c-800a-4386f947ef27.png',
+  alt: 'Máquina dispensando adhesivo hot melt sobre tarros de conserva en línea de producción'
 }, {
   id: 'laminacion',
   title: 'Adhesivos para Laminación y Recubrimientos',
   description: 'Adhesivos hot melt para protección de envases celulósicos y laminaciones con efecto barrera.',
   applications: ['Protección de envases celulósicos con efecto barrera', 'Recubrimientos para papel con excelente resistencia a la humedad y la abrasión'],
   bgColor: 'bg-white',
-  image: '/lovable-uploads/4e95326e-0ba7-442f-9197-f0b33ab63daa.png',
-  alt: 'Automóvil en una línea de producción con brazos robóticos'
+  image: '/lovable-uploads/ee978a78-43bf-4b20-a01b-dc489499d3b9.png',
+  alt: 'Proceso de laminación industrial con papel pasando por rodillos'
 }, {
   id: 'etiquetado',
   title: 'Etiquetado',
   description: 'Adhesivos hot melt con alto poder de adhesión sobre etiquetas de papel, papel plastificado para máquinas automáticas.',
   applications: ['Etiquetado de latas metálicas y tarros de vidrio', 'Etiquetado de todo tipo de envase PET, PP y HDPE'],
   bgColor: 'bg-gray-50',
-  image: '/lovable-uploads/e459fccd-a325-473c-a138-9747eb824bdb.png',
-  alt: 'Componente electrónico con acabado metálico y esferas en superficie'
+  image: '/lovable-uploads/5b02870e-6f92-455c-800a-4386f947ef27.png',
+  alt: 'Proceso de aplicación de adhesivo en tarros para etiquetado'
 }, {
   id: 'aplicaciones-tecnicas',
   title: 'Aplicaciones Industriales y Técnicas',
   description: 'Adhesivos hot melt especialmente diseñados para las más exigentes aplicaciones técnicas en todo tipo de industrias.',
   applications: ['Fabricación de colchones', 'Fabricación de filtros de aire', 'Unión de fibras o hilos en fabricación de flejes'],
   bgColor: 'bg-white',
-  image: '/lovable-uploads/e459fccd-a325-473c-a138-9747eb824bdb.png',
-  alt: 'Componente industrial en proceso de fabricación'
+  image: '/lovable-uploads/ef150d8d-0c27-4240-8797-b164978c309b.png',
+  alt: 'Equipo aplicando adhesivo hot melt en un colchón durante su fabricación'
 }];
 
 const Productos = () => {
