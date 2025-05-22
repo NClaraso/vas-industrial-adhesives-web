@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
@@ -7,43 +8,51 @@ import { ArrowRight, Package } from 'lucide-react';
 const industryProducts = [{
   id: 'packaging',
   title: 'Packaging y Embalaje',
-  description: 'Adhesivos hot melt para la industria del packaging y embalaje, ideales para cerrado de cajas, formado de bandejas y encolado de estuches.',
-  applications: ['Cerrado de cajas de cartón', 'Encolado de estuches', 'Adhesivos para etiquetas', 'Formación de bandejas', 'Packaging alimentario'],
+  description: 'Adhesivos hot melt para cerrado de cajas, formado de bandejas y conformado y montaje de estuches en la industria del packaging.',
+  applications: ['Cerrado de cajas de cartón', 'Conformado y cierre de estuches', 'Packaging en general'],
   bgColor: 'bg-vas-gray',
   image: '/lovable-uploads/fad9b0d0-bff6-4013-a4a4-481c21936615.png',
   alt: 'Cajas de cartón en una cinta transportadora en una fábrica de packaging'
 }, {
-  id: 'madera',
-  title: 'Industria de la Madera',
-  description: 'Soluciones adhesivas para la industria del mueble y la madera, con aplicaciones en encolado de cantos, recubrimiento de perfiles y montaje.',
-  applications: ['Encolado de cantos', 'Recubrimiento de perfiles', 'Montaje de muebles', 'Uniones de madera', 'Laminación de superficies'],
+  id: 'encuadernacion',
+  title: 'Encuadernación',
+  description: 'Adhesivos hot melt para encolado de volúmenes cosidos o fresados, encolado de cortesía, catálogos, revistas, dossiers con excelente adhesión.',
+  applications: ['Encolado de lomos fresados o cosidos, en rústica y todo tipo de máquinas', 'Unión de laterales y pegados de cortesía en libros, revistas'],
   bgColor: 'bg-white',
   image: '/lovable-uploads/c2e0bec5-ea8a-4794-991f-473cf5c74c2b.png',
   alt: 'Trabajo de precisión en madera con herramienta industrial'
 }, {
-  id: 'higiene',
-  title: 'Higiene y No-tejidos',
-  description: 'Adhesivos especializados para la fabricación de productos de higiene personal y aplicaciones en materiales no-tejidos.',
-  applications: ['Pañales y productos de incontinencia', 'Productos femeninos', 'Toallitas húmedas', 'Productos médicos desechables', 'Tejidos técnicos'],
+  id: 'embalaje-flexible',
+  title: 'Embalaje Flexible',
+  description: 'Adhesivos hot melt para la fabricación en banderolaje de envases tipo yogurt y para termosellado de productos alimenticios.',
+  applications: ['Fabricación en banderolaje de envases tipo yogurt', 'Aplicaciones de termosellados de productos alimenticios'],
   bgColor: 'bg-gray-50',
   image: '/lovable-uploads/c98aa73f-f959-444c-9e98-f1d3b8b789e0.png',
   alt: 'Rollos de material no tejido en una instalación industrial de productos de higiene'
 }, {
-  id: 'automocion',
-  title: 'Automoción',
-  description: 'Adhesivos hot melt de alto rendimiento para aplicaciones en la industria automotriz y fabricación de componentes.',
-  applications: ['Insonorización y antivibraciones', 'Montaje de componentes interiores', 'Unión de textiles y espumas', 'Sellado y protección', 'Fijación de cables'],
+  id: 'laminacion',
+  title: 'Adhesivos para Laminación y Recubrimientos',
+  description: 'Adhesivos hot melt para protección de envases celulósicos y laminaciones con efecto barrera.',
+  applications: ['Protección de envases celulósicos con efecto barrera', 'Recubrimientos para papel con excelente resistencia a la humedad y la abrasión'],
   bgColor: 'bg-white',
   image: '/lovable-uploads/4e95326e-0ba7-442f-9197-f0b33ab63daa.png',
   alt: 'Automóvil en una línea de producción con brazos robóticos'
 }, {
-  id: 'ensamblaje',
-  title: 'Ensamblaje Técnico',
-  description: 'Soluciones para uniones técnicamente exigentes en diversos procesos industriales de ensamblaje y fabricación.',
-  applications: ['Montaje de componentes electrónicos', 'Unión de plásticos técnicos', 'Aplicaciones de aislamiento', 'Fijación de componentes', 'Industria de electrodomésticos'],
+  id: 'etiquetado',
+  title: 'Etiquetado',
+  description: 'Adhesivos hot melt con alto poder de adhesión sobre etiquetas de papel, papel plastificado para máquinas automáticas.',
+  applications: ['Etiquetado de latas metálicas y tarros de vidrio', 'Etiquetado de todo tipo de envase PET, PP y HDPE'],
   bgColor: 'bg-gray-50',
   image: '/lovable-uploads/e459fccd-a325-473c-a138-9747eb824bdb.png',
   alt: 'Componente electrónico con acabado metálico y esferas en superficie'
+}, {
+  id: 'aplicaciones-tecnicas',
+  title: 'Aplicaciones Industriales y Técnicas',
+  description: 'Adhesivos hot melt especialmente diseñados para las más exigentes aplicaciones técnicas en todo tipo de industrias.',
+  applications: ['Fabricación de colchones', 'Fabricación de filtros de aire', 'Unión de fibras o hilos en fabricación de flejes'],
+  bgColor: 'bg-white',
+  image: '/lovable-uploads/e459fccd-a325-473c-a138-9747eb824bdb.png',
+  alt: 'Componente industrial en proceso de fabricación'
 }];
 
 const Productos = () => {
