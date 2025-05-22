@@ -12,8 +12,8 @@ const industryProducts = [{
   description: 'Adhesivos hot melt para cerrado de cajas, formado de bandejas y conformado y montaje de estuches en la industria del packaging.',
   applications: ['Cerrado de cajas de cartón', 'Conformado y cierre de estuches', 'Packaging en general'],
   bgColor: 'bg-vas-gray',
-  image: '/lovable-uploads/bd8ebf19-a388-479e-bbde-f07bff05cc32.png',
-  alt: 'Envases de yogurt en una línea de producción industrial'
+  image: '/lovable-uploads/27b3d2da-6272-4282-924e-c625e35be927.png',
+  alt: 'Línea de producción industrial con dispensadores aplicando adhesivo en cajas de cartón'
 }, {
   id: 'encuadernacion',
   title: 'Encuadernación',
@@ -28,8 +28,8 @@ const industryProducts = [{
   description: 'Adhesivos hot melt para la fabricación en banderolaje de envases tipo yogurt y para termosellado de productos alimenticios.',
   applications: ['Fabricación en banderolaje de envases tipo yogurt', 'Aplicaciones de termosellados de productos alimenticios'],
   bgColor: 'bg-gray-50',
-  image: '/lovable-uploads/5b02870e-6f92-455c-800a-4386f947ef27.png',
-  alt: 'Máquina dispensando adhesivo hot melt sobre tarros de conserva en línea de producción'
+  image: '/lovable-uploads/9366a211-6381-4bff-8dd5-113039145175.png',
+  alt: 'Línea de producción con envases de plástico blancos para productos alimenticios'
 }, {
   id: 'laminacion',
   title: 'Adhesivos para Laminación y Recubrimientos',

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -13,6 +12,7 @@ const products = [
     color: 'bg-gray-50', // Lightest gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
+    image: '/lovable-uploads/27b3d2da-6272-4282-924e-c625e35be927.png',
   },
   {
     id: 'encuadernacion',
@@ -29,6 +29,7 @@ const products = [
     color: 'bg-gray-200', // Medium gray
     textColor: 'text-vas-dark',
     icon: <Package className="w-8 h-8 text-vas-bronze" />,
+    image: '/lovable-uploads/9366a211-6381-4bff-8dd5-113039145175.png',
   },
   {
     id: 'laminacion',
