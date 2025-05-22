@@ -1,10 +1,8 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Package } from 'lucide-react';
-
 const industryProducts = [{
   id: 'packaging',
   title: 'Packaging y Embalaje',
@@ -54,7 +52,6 @@ const industryProducts = [{
   image: '/lovable-uploads/e459fccd-a325-473c-a138-9747eb824bdb.png',
   alt: 'Componente industrial en proceso de fabricación'
 }];
-
 const Productos = () => {
   return <Layout>
       {/* Hero Section */}
@@ -95,9 +92,7 @@ const Productos = () => {
                       <h2 className="heading-md mb-6">
                         {industry.title}
                       </h2>
-                      <p className="text-lg mb-6 leading-relaxed text-inherit">
-                        {industry.description}
-                      </p>
+                      
                       <h3 className="text-lg font-semibold mb-4">Aplicaciones principales:</h3>
                       <ul className="space-y-3 mb-8">
                         {industry.applications.map((app, idx) => <li key={idx} className="flex items-center">
@@ -115,11 +110,7 @@ const Productos = () => {
                     <div className={`order-${index % 2 === 0 ? '2' : '1'} lg:order-2 relative`}>
                       <div className="aspect-square rounded-lg overflow-hidden bg-vas-gray">
                         <div className="absolute inset-0 bg-gradient-to-br from-vas-bronze/20 to-vas-dark/80 opacity-40"></div>
-                        <img 
-                          src={industry.image}
-                          alt={industry.alt}
-                          className="w-full h-full object-cover"
-                        />
+                        <img src={industry.image} alt={industry.alt} className="w-full h-full object-cover" />
                       </div>
                     </div>
                   </div>
